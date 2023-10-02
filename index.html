@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta name="description" content="O melhor JokenPô do Brasil - Created By: Gabriel Aroucas">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/scss/style.css">
+    <script src="js/main.js" defer></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/sweetalert2/dist/sweetalert2.all.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css' integrity='sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==' crossorigin='anonymous' referrerpolicy='no-referrer' />
+    <title>JokenPô</title>
+</head>
+<body onload="unknownImage()">
+    <section class="scoreBoard">cl
+        <div class="scoreBoardPlayerOne">
+            <span id="scoreBoardPlayerOne">0</span>
+        </div> 
+
+        <div class="scoreBoardPlayerTwo">
+            <span id="scoreBoardPlayerTwo">0</span>
+        </div>
+        
+    </section>
+    <main>
+        <section class="bannerPlayer">
+            <div class="bannerPlayerOne">
+                <img src="https://via.placeholder.com/150" width="150px" alt="playerOne" id="srcPlayerOne">
+            </div>
+            <div class="x">
+                <h1>x</h1>
+            </div>
+            <div class="bannerPlayerTwo">
+                <img src="https://via.placeholder.com/150" width="150px" alt="playerTwo" id="srcPlayerTwo">
+            </div>
+        </section>
+        <section class="choices">
+            <div class="container">
+                <div class="rock">
+                    <input type="radio" name="rock" id="rock" onclick="playerChoose(rock)">
+                    <label for="rock"><i class="fas fa-hand-back-fist" aria-hidden="true"></i></label>
+                </div>
+                <div class="paper">
+                    <input type="radio" name="paper" id="paper" onclick="playerChoose(paper)">
+                    <label for="paper"><i class="fas fa-hand" aria-hidden="true"></i></label>
+                </div>
+                <div class="scissors">
+                    <input type="radio" name="scissor" id="scissor" onclick="playerChoose(scissor)">
+                    <label for="scissor"><i class="fas fa-scissors" aria-hidden="true" ></i></label>
+            </div>
+        </div>
+        </section>
+        <section class="playGame">
+            <button type="button" id="playGame" onclick="playGame()" >Jogar</button>
+        </section>
+    </main>
+    <footer class="footer"> Created by <a href='https://www.facebook.com/gabrielaroucas'> Gabriel Aroucas</a> &copy; 2023 - free use</footer>
+</body>
+</html>

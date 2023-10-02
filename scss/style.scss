@@ -1,0 +1,140 @@
+@import './_variables.scss';
+@import './_mixins.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: $fourth-color;
+}
+
+body {
+    background-color: $primary-color;
+}
+
+.scoreBoard {
+    @include flex();
+    justify-content: space-between;
+
+    .scoreBoardPlayerOne,
+    .scoreBoardPlayerTwo {
+        width: 40%;
+        font-size: 2.5rem;
+        font-family: orbitron;
+        background-color: $secondary-color;
+    }
+
+    .scoreBoardPlayerOne {
+        text-align: end;
+        border-radius: 0px 10px 10px 0px;
+    }
+
+    .scoreBoardPlayerTwo {
+        text-align: start;
+        border-radius: 10px 0px 0px 10px;
+    }
+
+    span {
+        margin: 0 1vw;
+
+    }
+}
+
+.bannerPlayer {
+    @include flex();
+
+    .bannerPlayerOne,
+    .bannerPlayerTwo,
+    .x {
+        margin: 2vw;
+
+        img {
+            filter: brightness(1000%);
+            border-radius: 50%;
+            border: 5px solid $fourth-color;
+        }
+    }
+}
+
+.choices {
+    .container {
+        width: 55%;
+        margin: auto;
+        border-radius: 10px;
+        background-color: $secondary-color;
+        @include flex();
+    }
+
+    #rock,
+    #paper,
+    #scissor {
+        display: none;
+    }
+
+    label {
+        font-size: 3.5rem;
+        margin: 3vw;
+        cursor: pointer;
+
+        i:hover {
+            color: #000;
+        }
+    }
+
+}
+
+.playGame {
+    text-align: center;
+
+    #playGame {
+        font-size: 3rem;
+        background-color: $primary-color;
+        font-family: orbitron;
+        border: 3px solid $fourth-color;
+        border-radius: 8px;
+        margin: 2vw 0;
+        cursor: pointer;
+    }
+
+    #playGame:hover {
+        background-color: $terciary-color;
+
+    }
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+@media only screen and (max-width:340px) {
+    .bannerPlayer {
+
+        .bannerPlayerOne,
+        .bannerPlayerTwo {
+            img {
+                width: 40vw;
+                height: 40vw;
+            }
+        }
+    }
+
+    .choices {
+        .container {
+            width: 100%;
+        }
+
+        label {
+            font-size: 15vw;
+        }
+    }
+
+
+    .playGame {
+        #playGame {
+            font-size: 15vw;
+        }
+    }
+}
